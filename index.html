@@ -45,8 +45,11 @@
       color: #111;
       min-height: 100vh;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
+      padding: 16px 0 32px;
+      gap: 28px;
     }
     .page {
       width: 100%;
@@ -118,6 +121,83 @@
         max-width: 260px;
       }
     }
+
+    .section {
+      width: 100%;
+      max-width: 480px;
+      padding: 0 12px;
+      margin: 0 auto;
+    }
+    .section h2 {
+      font-size: 16px;
+      font-weight: 600;
+      color: #444;
+      margin: 0 0 12px;
+      text-align: center;
+      letter-spacing: 0.02em;
+    }
+    .testimonials-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .testimonial {
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      grid-gap: 12px;
+      align-items: start;
+      margin: 0;
+      padding: 14px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    .testimonial .mug {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      background: #e5e5e5;
+    }
+    .testimonial .quote {
+      margin: 0;
+      font-style: italic;
+      font-size: 14px;
+      line-height: 1.45;
+      color: #222;
+      border-left: 3px solid #4A90E2;
+      padding: 2px 0 2px 10px;
+      position: relative;
+    }
+    .testimonial .quote::before {
+      content: "\201C";
+      position: absolute;
+      left: 6px;
+      top: -10px;
+      font-size: 28px;
+      color: #4A90E2;
+      opacity: 0.35;
+      line-height: 1;
+    }
+    .testimonial figcaption {
+      grid-column: 2;
+      margin-top: 6px;
+      font-size: 13px;
+      color: #555;
+    }
+    .testimonial figcaption a,
+    .testimonial a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .testimonial figcaption a:hover {
+      text-decoration: underline;
+    }
+
+    .interest .buttons {
+      gap: 10px;
+    }
   </style>
   
 </head>
@@ -153,5 +233,61 @@
 
     </div>
   </div>
+
+  <section id="testimonials" class="section" hidden>
+    <h2>Ils en parlent</h2>
+    <div class="testimonials-list"></div>
+  </section>
+
+  <section id="interest" class="section interest">
+    <h2>Coming soon · English &amp; Deutsch</h2>
+    <div class="buttons">
+      <a class="btn"
+         href="mailto:info@ouvertarisme.fr?subject=I%27m%20interested%20in%20the%20English%20version"
+         onclick="gtag('event','interest_register',{language:'en'})">
+        <span>🇬🇧 Register interest — English</span>
+      </a>
+      <a class="btn"
+         href="mailto:info@ouvertarisme.fr?subject=I%27m%20interested%20in%20the%20German%20version"
+         onclick="gtag('event','interest_register',{language:'de'})">
+        <span>🇩🇪 Interesse anmelden — Deutsch</span>
+      </a>
+    </div>
+  </section>
+
+  <script>
+    (function () {
+      var section = document.getElementById('testimonials');
+      var list = section && section.querySelector('.testimonials-list');
+      if (!section || !list) return;
+
+      function escapeHTML(s) {
+        return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+          return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+        });
+      }
+
+      fetch('testimonial/testimonials.json', { cache: 'no-cache' })
+        .then(function (r) { return r.ok ? r.json() : []; })
+        .then(function (items) {
+          if (!Array.isArray(items) || items.length === 0) return;
+          list.innerHTML = items.map(function (t) {
+            var name = escapeHTML(t.name);
+            var quote = escapeHTML(t.quote);
+            var source = escapeHTML(t.source || '#');
+            var mug = 'testimonial/mugshot/' + escapeHTML(t.mugshot);
+            return '<figure class="testimonial">'
+              + '<a href="' + source + '" target="_blank" rel="noopener">'
+              + '<img class="mug" src="' + mug + '" alt="' + name + '" loading="lazy" />'
+              + '</a>'
+              + '<blockquote class="quote">' + quote + '</blockquote>'
+              + '<figcaption><a href="' + source + '" target="_blank" rel="noopener">— ' + name + '</a></figcaption>'
+              + '</figure>';
+          }).join('');
+          section.hidden = false;
+        })
+        .catch(function () { /* leave hidden */ });
+    })();
+  </script>
 </body>
 </html>
