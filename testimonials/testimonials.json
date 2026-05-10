@@ -1,1 +1,128 @@
-[]
+[
+  {
+    "id": "REV-001",
+    "mugshot": "001.jpg",
+    "name": "Gilles Babinet",
+    "quote": "Excellent en tous points sur les vertus économiques, sociales et même démocratiques de l'Open Source.",
+    "source": "https://www.linkedin.com/feed/update/urn:li:activity:7458905801643048960"
+  },
+  {
+    "id": "REV-002",
+    "mugshot": "002.jpg",
+    "name": "Clément Durand",
+    "quote": "Les refléxions de Yann sur le sujet méritent plus de visibilité.",
+    "source": "https://www.linkedin.com/feed/update/urn:li:activity:7458788293724389376?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7458788293724389376%2C7458821050743791616%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287458821050743791616%2Curn%3Ali%3Aactivity%3A7458788293724389376%29"
+  },
+  {
+    "id": "REV-003",
+    "mugshot": "003.jpg",
+    "name": "Claire Brière Mayeux",
+    "quote": "je le partage depuis autour de moi pour celles et ceux qui veulent une approche lisible de l’ « ouvertarisme »",
+    "source": "https://www.linkedin.com/feed/update/urn:li:activity:7458788293724389376?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7458788293724389376%2C7458911320856469505%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287458911320856469505%2Curn%3Ali%3Aactivity%3A7458788293724389376%29"
+  },
+  {
+    "id": "REV-004",
+    "mugshot": "004.jpg",
+    "name": "Patrick Cappe de Baillon",
+    "quote": "Excellent ouvrage et réflexion sur une méthode structurée pour reprendre le contrôle de notre stack numérique.",
+    "source": "https://www.linkedin.com/feed/update/urn:li:activity:7458788293724389376?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7458788293724389376%2C7458851193918799873%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287458851193918799873%2Curn%3Ali%3Aactivity%3A7458788293724389376%29"
+  },
+  {
+    "id": "REV-005",
+    "mugshot": "005.jpg",
+    "name": "Guillaume Figard-Usannaz",
+    "quote": "Un Internet des Lumières 💡 pour des Citoyens Éclairés et une Europe qui se place dans la troisième voie : l’Humanisme 🇪🇺",
+    "source": "https://www.linkedin.com/feed/update/urn:li:activity:7458788293724389376?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7458788293724389376%2C7458801896800075776%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287458801896800075776%2Curn%3Ali%3Aactivity%3A7458788293724389376%29"
+  },
+  {
+    "id": "REV-006",
+    "mugshot": "006.jpg",
+    "name": "Frédéric Créplet",
+    "quote": "Oui très bel ouvrage que m’a offert Thierry Stiegler ✨🙏",
+    "source": "https://www.linkedin.com/feed/update/urn:li:activity:7458788293724389376?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7458788293724389376%2C7458913658350469120%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287458913658350469120%2Curn%3Ali%3Aactivity%3A7458788293724389376%29"
+  },
+  {
+    "id": "REV-007",
+    "mugshot": "007.jpg",
+    "name": "Julie Gallavardin",
+    "quote": "on ne coche pas des cases, on pilote des équilibres.",
+    "source": "https://www.linkedin.com/feed/update/urn:li:activity:7447926300809441280"
+  },
+  {
+    "id": "REV-008",
+    "mugshot": "008.png",
+    "name": "Fabienne Billat",
+    "quote": "À la croisée de la technologie, de la géopolitique et presque de la philosophie […] Voilà un ouvrage qui fera date !",
+    "source": "https://www.linkedin.com/feed/update/urn:li:activity:7445734424228519937"
+  },
+  {
+    "id": "REV-009",
+    "mugshot": "009.jpg",
+    "name": "James Martin",
+    "quote": "A manifesto for tech openness, couldn’t come at a better time.",
+    "source": "https://www.linkedin.com/feed/update/urn:li:activity:7438865667304407040"
+  },
+  {
+    "id": "REV-010",
+    "mugshot": "010.jpg",
+    "name": "Alain Garnier",
+    "quote": "l’ouverture n’est pas juste une licence… c’est un choix de société.",
+    "source": "https://www.linkedin.com/feed/update/urn:li:activity:7438238264408326145"
+  },
+  {
+    "id": "REV-011",
+    "mugshot": "011.jpg",
+    "name": "Philippe Zaouati",
+    "quote": "Penser le numérique comme un projet politique et civilisationnel, dans l’héritage des Lumières.",
+    "source": "https://www.linkedin.com/feed/update/urn:li:activity:7437808561449197568"
+  },
+  {
+    "id": "REV-012",
+    "mugshot": "012.jpg",
+    "name": "Thomas Husson",
+    "quote": "Je suis impressionné par la force de ses convictions et la clarté de son propos.",
+    "source": "https://www.linkedin.com/feed/update/urn:li:activity:7437051958890319872"
+  },
+  {
+    "id": "REV-013",
+    "mugshot": "013.jpg",
+    "name": "Aurélien Cottet",
+    "quote": "Un manifeste incontestable pour un numérique souverain, éthique et coopératif.",
+    "source": "https://www.linkedin.com/feed/update/urn:li:activity:7436332374042513408"
+  },
+  {
+    "id": "REV-014",
+    "mugshot": "014.jpg",
+    "name": "Sébastien Soriano",
+    "quote": "💡 Souveraineté et ouverture ne sont pas contradictoires 💫 Un ouvrage lumineux et nécessaire à propos des politiques d'ouverture dans le numérique",
+    "source": "https://www.linkedin.com/feed/update/urn:li:activity:7435619371760132096"
+  },
+  {
+    "id": "REV-015",
+    "mugshot": "015.jpg",
+    "name": "Philippe Dewost",
+    "quote": "Dans ma bibliothèque, lu et aimé !",
+    "source": "https://www.linkedin.com/feed/update/urn:li:activity:7435595394534883328?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7435595394534883328%2C7435722162730160128%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287435722162730160128%2Curn%3Ali%3Aactivity%3A7435595394534883328%29"
+  },
+  {
+    "id": "REV-016",
+    "mugshot": "016.jpg",
+    "name": "Geoffray Sulkowski",
+    "quote": "Une belle vision de l’Openness. Merci Yann Lechelle pour cet ouvrage bien agréable à lire.",
+    "source": "https://www.linkedin.com/feed/update/urn:li:activity:7435595394534883328?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7435595394534883328%2C7435802926520008704%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287435802926520008704%2Curn%3Ali%3Aactivity%3A7435595394534883328%29"
+  },
+  {
+    "id": "REV-017",
+    "mugshot": "017.jpg",
+    "name": "Isabelle Laudier",
+    "quote": "Yann Lechelle développe une lecture architecturale et géoéconomique de ces enjeux.",
+    "source": "https://www.linkedin.com/feed/update/urn:li:activity:7435034093047914496"
+  },
+  {
+    "id": "REV-018",
+    "mugshot": "018.png",
+    "name": "Homéric de Sarthe",
+    "quote": "Un projet qui prend tout son sens à l’heure où la souveraineté des solutions européennes occupe les esprits.",
+    "source": "https://www.linkedin.com/feed/update/urn:li:activity:7411400692537536512"
+  }
+]
