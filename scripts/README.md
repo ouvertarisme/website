@@ -2,17 +2,28 @@
 
 ## `build_testimonials.py`
 
-Regenerates `testimonial/testimonials.json` from `testimonial/testimonials.csv`. Python 3 stdlib only.
+Regenerates `testimonials/testimonials.json` from `testimonials/testimonials.csv`. Python 3 stdlib only.
 
-Workflow:
+### CSV format
 
-1. Add a row to `testimonial/testimonials.csv` with columns `source,name,quote,mugshot`.
-2. Save the avatar image (any filename, e.g. `alice.jpg`) into `testimonial/mugshot/`. Put that filename in the `mugshot` column.
+`testimonials/testimonials.csv` (header required, columns in any order):
+
+| column    | meaning                                                 |
+|-----------|---------------------------------------------------------|
+| `id`      | stable id, e.g. `REV-001`.                              |
+| `mugshot` | avatar filename in `testimonials/mugshots/`.            |
+| `name`    | display name shown under the quote.                     |
+| `quote`   | the short testimonial text.                             |
+| `source`  | link to the original post/comment.                      |
+
+### Workflow
+
+1. Drop the avatar image into `testimonials/mugshots/` (e.g. `REV-001.jpg`).
+2. Add a row to `testimonials/testimonials.csv` with the matching filename in the `mugshot` column.
 3. Run:
    ```
    python3 scripts/build_testimonials.py
    ```
-4. The script renames the file to `<token>.<ext>` (token derived from `source`) and rewrites the JSON. Re-running with no changes is a safe no-op.
-5. Commit the updated CSV, JSON, and renamed mugshot file.
+4. Commit the CSV, the new mugshot file, and the regenerated JSON.
 
-If a row's `mugshot` column is left empty, the script expects an existing `<token>.<ext>` file already in `testimonial/mugshot/`.
+Rows with empty fields or a missing mugshot file are skipped with a warning. Re-running with no changes is a safe no-op.
