@@ -141,13 +141,8 @@
       flex-direction: column;
       gap: 14px;
     }
-    .testimonial-link {
-      display: block;
-      color: inherit;
-      text-decoration: none;
-      -webkit-tap-highlight-color: rgba(74,144,226,0.15);
-    }
     .testimonial {
+      position: relative;
       display: grid;
       grid-template-columns: 56px 1fr;
       grid-gap: 12px;
@@ -158,18 +153,13 @@
       border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.08);
       transition: box-shadow 0.12s ease-out, transform 0.08s ease-out;
+      cursor: pointer;
+      -webkit-tap-highlight-color: rgba(74,144,226,0.15);
     }
-    .testimonial-link:hover .testimonial,
-    .testimonial-link:focus-visible .testimonial {
+    .testimonial:hover,
+    .testimonial:focus-within {
       box-shadow: 0 4px 12px rgba(0,0,0,0.16);
       transform: translateY(-1px);
-    }
-    .testimonial-link:focus-visible {
-      outline: none;
-    }
-    .testimonial-link:focus-visible .testimonial {
-      outline: 2px solid #4A90E2;
-      outline-offset: 2px;
     }
     .testimonial .mug {
       width: 56px;
@@ -209,6 +199,24 @@
       justify-content: space-between;
       gap: 8px;
     }
+    .testimonial-link {
+      color: inherit;
+      text-decoration: none;
+    }
+    .testimonial-link::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      z-index: 1;
+    }
+    .testimonial-link:focus-visible {
+      outline: none;
+    }
+    .testimonial:focus-within {
+      outline: 2px solid #4A90E2;
+      outline-offset: 2px;
+    }
     .testimonial .external {
       flex: none;
       width: 14px;
@@ -217,8 +225,8 @@
       opacity: 0.65;
       transition: opacity 0.12s ease-out;
     }
-    .testimonial-link:hover .external,
-    .testimonial-link:focus-visible .external {
+    .testimonial:hover .external,
+    .testimonial:focus-within .external {
       opacity: 1;
     }
 
@@ -308,13 +316,14 @@
             var quote = escapeHTML(t.quote);
             var source = escapeHTML(t.source || '#');
             var mug = 'testimonials/mugshots/' + escapeHTML(t.mugshot);
-            return '<a class="testimonial-link" href="' + source + '" target="_blank" rel="noopener" aria-label="Lire le témoignage de ' + name + '">'
-              + '<figure class="testimonial">'
+            return '<figure class="testimonial">'
               + '<img class="mug" src="' + mug + '" alt="" loading="lazy" />'
               + '<blockquote class="quote">' + quote + '</blockquote>'
-              + '<figcaption><span>— ' + name + '</span>' + icon + '</figcaption>'
-              + '</figure>'
-              + '</a>';
+              + '<figcaption>'
+              + '<a class="testimonial-link" href="' + source + '" target="_blank" rel="noopener">— ' + name + '</a>'
+              + icon
+              + '</figcaption>'
+              + '</figure>';
           }).join('');
           section.hidden = false;
         })
