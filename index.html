@@ -267,7 +267,7 @@
         });
       }
 
-      fetch('testimonial/testimonials.json', { cache: 'no-cache' })
+      fetch('testimonials/testimonials.json', { cache: 'no-cache' })
         .then(function (r) { return r.ok ? r.json() : []; })
         .then(function (items) {
           if (!Array.isArray(items) || items.length === 0) return;
@@ -275,7 +275,7 @@
             var name = escapeHTML(t.name);
             var quote = escapeHTML(t.quote);
             var source = escapeHTML(t.source || '#');
-            var mug = 'testimonial/mugshot/' + escapeHTML(t.mugshot);
+            var mug = 'testimonials/mugshots/' + escapeHTML(t.mugshot);
             return '<figure class="testimonial">'
               + '<a href="' + source + '" target="_blank" rel="noopener">'
               + '<img class="mug" src="' + mug + '" alt="' + name + '" loading="lazy" />'
